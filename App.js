@@ -13,15 +13,12 @@ function App() {
     }
     // console.log(orderData);
     setData(orderData)
-  }
-
-  const receiveDataHandler=()=>{
-    return data
+    console.log(data)
   }
 
   return (
     <div className="App">
-      <OrderData onAddData={receiveDataHandler} />
+      <OrderData onAddData={data} />
       <OrderDataForm onGetData={getDataHandler} />
     </div>
   );
