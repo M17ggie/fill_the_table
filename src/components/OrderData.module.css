@@ -1,0 +1,17 @@
+.table-data{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.table-data table{
+    border-collapse: collapse;
+}
+
+.table-data table th,td{
+    margin: 1rem;
+    border: 1px solid black;
+    padding: 1rem;
+}
