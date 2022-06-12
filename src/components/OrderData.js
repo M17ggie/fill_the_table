@@ -11,7 +11,12 @@ const OrderData = (props) => {
         amount: 450
     }]
 
-    props.onAddData(orders)
+    props.onAddData(orders);
+
+    const orderDetail={
+        ...orders,
+        id: Math.random().toString()
+    }
 
     return <div className={styles['table-data']}>
         <table>
@@ -37,12 +42,11 @@ const OrderData = (props) => {
                     </th>
                 </tr>
                 <tr>
-                    <td>{orders[0].orderId}</td>
-                    <td>{orders[0].name}</td>
-                    <td>{orders[0].purchaseDate}</td>
-                    <td>{orders[0].deliveryDate}</td>
-                    <td>{orders[0].quantity}</td>
-                    <td>{orders[0].amount}</td>
+                    {orderDetail.map(order, index=>{
+                        order[index].id,
+                        order[index].name,
+                        
+                    })}
                 </tr>
             </tbody>
         </table>
