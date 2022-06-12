@@ -2,7 +2,7 @@ import styles from './OrderData.module.css'
 
 const OrderData = (props) => {
 
-    const orders=[{
+    const orders = [{
         orderId: 1,
         name: 'Black Cat',
         deliveryDate: '11-05-2022',
@@ -11,14 +11,7 @@ const OrderData = (props) => {
         amount: 450
     }]
 
-    props.onAddData(orders);
-
-    const orderDetail={
-        ...orders,
-        id: Math.random().toString()
-    }
-
-    console.log(orderDetail)
+    // console.log([orders, props.onAddData])
 
     return <div className={styles['table-data']}>
         <table>
@@ -44,12 +37,12 @@ const OrderData = (props) => {
                     </th>
                 </tr>
                 <tr>
-                    <td>{orderDetail[0].orderId}</td>
+                    {/* <td>{orderDetail[0].orderId}</td>
                     <td>{orderDetail[0].name}</td>
                     <td>{orderDetail[0].purchaseDate}</td>
                     <td>{orderDetail[0].deliveryDate}</td>
                     <td>{orderDetail[0].quantity}</td>
-                    <td>{orderDetail[0].amount}</td>
+                    <td>{orderDetail[0].amount}</td> */}
                 </tr>
             </tbody>
         </table>
