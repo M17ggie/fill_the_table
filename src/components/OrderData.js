@@ -18,6 +18,8 @@ const OrderData = (props) => {
         id: Math.random().toString()
     }
 
+    console.log(orderDetail)
+
     return <div className={styles['table-data']}>
         <table>
             <tbody>
@@ -42,11 +44,12 @@ const OrderData = (props) => {
                     </th>
                 </tr>
                 <tr>
-                    {orderDetail.map(order, index=>{
-                        order[index].id,
-                        order[index].name,
-                        
-                    })}
+                    <td>{orderDetail[0].orderId}</td>
+                    <td>{orderDetail[0].name}</td>
+                    <td>{orderDetail[0].purchaseDate}</td>
+                    <td>{orderDetail[0].deliveryDate}</td>
+                    <td>{orderDetail[0].quantity}</td>
+                    <td>{orderDetail[0].amount}</td>
                 </tr>
             </tbody>
         </table>
