@@ -6,14 +6,12 @@ function App() {
 
   const [data, setData]=useState()
 
-  const getDataHandler=(enteredData)=>{
-    const orderData={
-      ...enteredData,
-      id: Math.random().toString()
+  const getDataHandler=(enteredOrder)=>{
+    const newOrder={
+      ...enteredOrder
     }
-    // console.log(orderData);
-    setData(orderData)
-    console.log(data)
+    // console.log(newOrder)
+    setData(newOrder)
   }
 
   return (
