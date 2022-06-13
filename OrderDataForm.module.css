@@ -1,0 +1,20 @@
+.form-control{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.form-control label, .form-control input{
+    margin: 0.25rem;
+}
+
+.form-control button{
+    margin: 0.25rem;
+    color: white;
+    background-color: black;
+    width: 5rem;
+    border: none;
+}
