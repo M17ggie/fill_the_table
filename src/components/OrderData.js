@@ -31,15 +31,38 @@ const orders = [{
 
 const OrderData = (props) => {
 
-    const [orderDetail, setOrderDetail] = useState(orders)
+    // const [orderDetail, setOrderDetail] = useState(orders)
 
-    const newOrder= props.onAddData
+    // const newOrder= props.onAddData;
 
-    console.log(newOrder)
+    // console.log(newOrder, 'This data is from OrderData.js')
 
     // setOrderDetail(prevOrder => {
-    //     return [...prevOrder, newOrder]
+    //     return [...prevOrder]
     // })
+
+    // console.log(orderDetail)
+
+    var baseOrders = [];
+    if (props.onAddData != null && props.onAddData.length > 0) {
+        var newData = props.onAddData;
+        baseOrders.push(newData);
+    }
+    // for (var oldOrder in orders[]) {
+    //     baseOrders.push(oldOrder);
+    //     console.log(oldOrder)
+    // }
+    for (var i = 0; i < orders.length; i++) {
+        var oldOrder = orders[i];
+        console.log(oldOrder);
+        baseOrders.push(oldOrder);
+    }
+    // console.log(baseOrders, orders, newData);
+    const [orderDetail, setOrderDetail] = useState();
+
+    setOrderDetail(prevOrder=>{
+        return [...prevOrder, props.onAddData]
+    })
 
     console.log(orderDetail)
 
@@ -68,14 +91,14 @@ const OrderData = (props) => {
                 </tr>
             </thead>
             <tbody>
-                {orders.map((order) => <tr key={order.orderId}>
+                {/* {orderDetail.map((order) => <tr key={order.orderId}>
                     <td>{order.orderId}</td>
                     <td>{order.name}</td>
                     <td>{order.purchaseDate}</td>
                     <td>{order.deliveryDate}</td>
                     <td>{order.quantity}</td>
                     <td>{order.amount}</td>
-                </tr>)}
+                </tr>)} */}
 
             </tbody>
         </table>
