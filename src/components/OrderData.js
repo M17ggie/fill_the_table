@@ -1,41 +1,45 @@
+import { useState } from 'react'
 import styles from './OrderData.module.css'
+
+const orders = [{
+    key: Math.random().toString(),
+    orderId: 1,
+    name: 'Black Cat',
+    purchaseDate: '12-06-2022',
+    deliveryDate: '11-05-2022',
+    quantity: 5,
+    amount: 450
+},
+{
+    key: Math.random().toString(),
+    orderId: 2,
+    name: 'Maggie',
+    purchaseDate: '15-06-2022',
+    deliveryDate: '10-05-2022',
+    quantity: 10,
+    amount: 10000
+},
+{
+    key: Math.random().toString(),
+    orderId: 3,
+    name: 'Danny',
+    purchaseDate: '15-06-2022',
+    deliveryDate: '17-05-2022',
+    quantity: 50,
+    amount: 50000
+}]
 
 const OrderData = (props) => {
 
-    const orders = [{
-        key: Math.random().toString(),
-        orderId: 1,
-        name: 'Black Cat',
-        deliveryDate: '11-05-2022',
-        purchaseDate: '12-06-2022',
-        quantity: 5,
-        amount: 450
-    },
-    {
-        key: Math.random().toString(),
-        orderId: 2,
-        name: 'Maggie',
-        deliveryDate: '10-05-2022',
-        purchaseDate: '15-06-2022',
-        quantity: 10,
-        amount: 10000
-    },
-    {
-        key: Math.random().toString(),
-        orderId: 3,
-        name: 'Danny',
-        deliveryDate: '17-05-2022',
-        purchaseDate: '15-06-2022',
-        quantity: 50,
-        amount: 50000
-    }]
+    const [orderDetail, setOrderDetail] = useState(orders)
 
-    const newOrder = props.onAddData;
+    const newOrder= props.onAddData
 
-    const orderDetail = [
-        ...orders,
-        newOrder
-    ]
+    console.log(newOrder)
+
+    // setOrderDetail(prevOrder => {
+    //     return [...prevOrder, newOrder]
+    // })
 
     console.log(orderDetail)
 
