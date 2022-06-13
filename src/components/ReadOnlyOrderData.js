@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-const ReadOnlyOrderData = ({ order }) => {
+const ReadOnlyOrderData = ({ order, getId }) => {
+
+    getId = order.orderId
 
     return <tr key={order.orderId}>
         <td>{order.orderId}</td>

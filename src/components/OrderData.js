@@ -7,10 +7,10 @@ const OrderData = (props) => {
 
     const [editRow, setEditRow] = useState()
 
-    const formSubmitHandler = (e, order) => {
+    const formSubmitHandler = (e, id) => {
         e.preventDefault();
-        console.log('Button is clicked!')
-        // setEditRow(orderId=>)
+        setEditRow(id)
+        console.log('Button is clicked!', editRow)
     }
 
     return <div className={styles['table-data']}>
@@ -45,7 +45,7 @@ const OrderData = (props) => {
                     {props.onAddData.map(order =>
                         <Fragment>
                             {/* If the row id matches with the editRow state(edit button), display edit row  */}
-                            {editRow === order.orderId ? <EditOrderRow /> : <ReadOnlyOrderData order={order} />}
+                            {editRow === order.orderId ? <EditOrderRow /> : <ReadOnlyOrderData order={order} getId={formSubmitHandler} />}
                         </Fragment>)}
                 </tbody>
             </table>
