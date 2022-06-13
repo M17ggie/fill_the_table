@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 const ReadOnlyOrderData = ({ order }) => {
+
     return <tr key={order.orderId}>
         <td>{order.orderId}</td>
         <td>{order.name}</td>
@@ -6,6 +9,9 @@ const ReadOnlyOrderData = ({ order }) => {
         <td>{order.deliveryDate}</td>
         <td>{order.quantity}</td>
         <td>{order.amount}</td>
+        <td>
+            <button>Edit</button>
+        </td>
     </tr>
 }
 

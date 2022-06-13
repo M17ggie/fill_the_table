@@ -1,4 +1,4 @@
-const EditOrderRow=()=>{
+const EditOrderRow = () => {
     return <tr>
         <td>
             <input type='number' required placeholder="Enter OrderId" />
@@ -10,13 +10,17 @@ const EditOrderRow=()=>{
             <input type='date' required placeholder="Enter purchase date" />
         </td>
         <td>
-            <input type='date' required  placeholder="Enter delivery date" />
+            <input type='date' required placeholder="Enter delivery date" />
         </td>
         <td>
             <input type='number' required placeholder="Enter quantity" />
         </td>
         <td>
             <input type='number' required placeholder="Enter amount" />
+        </td>
+        <td>
+            <button>Save</button>
+            <button>Cancel</button>
         </td>
     </tr>
 }
