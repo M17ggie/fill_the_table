@@ -20,14 +20,13 @@ const OrderDataForm = (props) => {
         e.preventDefault()
 
         const orderData = {
-            orderId: enteredOrder,
+            orderId: +enteredOrder,
             name: enteredName,
             purchaseDate: enteredPurchase,
             deliveryDate: enteredDelivery,
-            amount: enteredAmount,
-            quantity: enteredQuantity
+            amount: +enteredAmount,
+            quantity: +enteredQuantity
         }
-        // console.log('OrderDataForm.js', orderData)
         props.onGetData(orderData)
     }
 
