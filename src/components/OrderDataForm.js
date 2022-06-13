@@ -27,8 +27,7 @@ const OrderDataForm = (props) => {
             amount: enteredAmount,
             quantity: enteredQuantity
         }
-
-        // console.log(enteredOrder, enteredName, enteredPurchase, enteredDelivery, enteredAmount, enteredQuantity)
+        console.log('OrderDataForm.js', orderData)
         props.onGetData(orderData)
     }
 
